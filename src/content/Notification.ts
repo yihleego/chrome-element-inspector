@@ -1,5 +1,4 @@
 import Prism from "prismjs";
-import Emojis from "./Emojis";
 import ShadowDOMComponent from "./ShadowDOMComponent";
 
 /**
@@ -47,7 +46,7 @@ class Notification extends ShadowDOMComponent {
     document.addEventListener("click", () => {
       const target = getTargetCallback();
       const message =
-        `You clicked on ${target.id || target.tagName}! ${Emojis[Math.floor(Math.random() * Emojis.length)]}`;
+        `已选中: ${target.id || target.tagName}`;
       this.displayMessage(message);
     });
   }
